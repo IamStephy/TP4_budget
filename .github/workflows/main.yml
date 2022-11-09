@@ -15,8 +15,8 @@ jobs:
       - name: Run bisect 
   test:
         run: python myscript.py 
-        step:
-          - name: Run tests 
-            run: python manage.py test 
+        steps:
+            - name: Run tests 
+              run: python manage.py test 
 
 

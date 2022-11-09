@@ -14,6 +14,7 @@ jobs:
         run: pip install -r requirements.txt 
       - name: Run bisect 
   test:
+      - uses: actions/checkout@v3
         run: python myscript.py 
         steps:
             - name: Run tests 

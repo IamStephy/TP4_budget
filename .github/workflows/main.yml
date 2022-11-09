@@ -1,4 +1,4 @@
-name: Python package 
+image.pnname: Python package 
 on: [push]
 jobs:
   build:

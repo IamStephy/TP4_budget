@@ -6,18 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      # - name: Setup Python
-        # uses: actions/setup-python@v4
-        # with: 
-        #   python-version: "3.9"
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: "3.10"
       - name: Install packages 
         run: pip install -r requirements.txt 
-      - name: Run bisect 
-        run: python ./myscript.py 
       - name: Run tests 
         run: python manage.py test 
+      - name: Run bisect 
+        run: python myscript.py 
 
 

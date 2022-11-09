@@ -13,7 +13,9 @@ jobs:
       - name: Install packages 
         run: pip install -r requirements.txt 
       - name: Run bisect 
+  test:
         run: python myscript.py 
+        step:
           - name: Run tests 
             run: python manage.py test 
 
